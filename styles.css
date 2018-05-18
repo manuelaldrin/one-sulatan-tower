@@ -1,0 +1,850 @@
+/*/
+
+Website Name: One Sulatan Tower
+Theme URI: 
+Description: One Sulatan Tower Website
+Author: KMC Savills - Manuel Aldrin Balbino
+Version: 2.0
+Tags: 
+License: 
+License URI: 
+
+*/
+
+
+
+/****************************************
+GLOBAL
+****************************************/
+body{
+	background: #fff;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	border: 0;
+	box-sizing: border-box;
+}
+
+	body.overflow-body{
+		overflow: hidden;
+	}
+
+	body.modal-open{
+		padding-right: 0px !important;
+	}
+
+	body *{
+		box-sizing: border-box;
+	}
+
+	ul, ol{
+		padding-left: 0;
+		list-style:  none;
+	}
+
+	a,
+	a:hover,
+	a:visited,
+	a:focus,
+	button,
+	input,
+	select,
+	textarea,
+	.slick-slide,
+	.slick-arrow{
+		outline: 0;
+		border-radius: 0;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-o-appearance: none;
+		text-decoration: none;
+	}
+
+	.section-wrapper{
+		position: relative;
+	}
+
+	.hide{
+		display: none;
+	}
+
+	#main-wrapper{
+		overflow: hidden;
+	}
+
+	.ease-fast{
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.ease-slow{
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+	}
+
+	.custom-container{
+		width: 100%;
+	}
+
+	.section-bg{
+		background: #fff;
+		position: relative;
+		z-index: 100;
+	}
+
+	.container-rel{
+		position: relative;
+		z-index: 100;
+	}
+
+	.no-margin{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.no-gutter{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.center-section {
+	    position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		padding: 50px 0;
+		z-index: 200;
+	}
+
+
+/*Magnific popup*/
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+	/* overlay animate in */
+	.mfp-fade.mfp-bg.mfp-ready {
+	  opacity: 0.8;
+	}
+
+	/* overlay animate out */
+	.mfp-fade.mfp-bg.mfp-removing {
+	  opacity: 0;
+	}
+
+	/* content at start */
+	.mfp-fade.mfp-wrap .mfp-content {
+	  opacity: 0;
+	  -webkit-transition: all 0.15s ease-out;
+	  -moz-transition: all 0.15s ease-out;
+	  transition: all 0.15s ease-out;
+	}
+
+	/* content animate it */
+	.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	  opacity: 1;
+	}
+
+	/* content animate out */
+	.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	  opacity: 0;
+	}
+
+	.mfp-zoom-out-cur .mfp-image-holder .mfp-figure .mfp-close {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: auto;
+	    cursor: pointer;
+	}
+
+	.mfp-wrap .mfp-container{
+		cursor: default;
+	}
+
+/*Fullpage js*/
+.section {
+  text-align:center;
+  font-size: 3em;
+  padding-top: 0 !important;
+}
+
+/*Header*/
+.header-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background: #fff;
+}
+
+	.header-logo img {
+	    max-width: 350px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 100%;
+	    margin: 15px 0;
+	}
+
+	.header-logo span {
+	    display: inline-block;
+	    vertical-align: middle;
+	    font-size: 30px;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    color: #ff6d00;
+	    letter-spacing: 1px;
+	    border: 1px solid #f9b786;
+	    padding: 10px 15px;
+	    line-height: 1;
+	    margin: 20px 0;
+	    border-bottom: 5px solid;
+	}
+
+	.header-right-logo {
+	    max-width: 125px;
+	    width: 100%;
+	    margin: 16px 0 16px auto;
+	}
+
+	.header-right-logo img{
+		width: 100%;
+	}
+
+
+/*Main*/
+.section-main{
+	background: url(images/arthaland5.jpg) no-repeat center / cover;
+}
+
+/*Banner*/
+.banner-wrap {
+    position: relative;
+    display: block;
+    min-height: 800px;
+}
+
+	.banner-photo{
+		position: absolute;
+	    right: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 100%;
+	    background: url(images/agreement.jpg) fixed no-repeat center bottom / cover;
+	}
+
+	.banner-wrap::before{
+		content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 100%;
+	    background: rgba(0, 0, 0, 0.3);
+	    z-index: 100;
+	}
+
+/*Featured Property*/
+.featprop-wrap{
+	position: absolute;
+	left: 0;
+	bottom: 150px;
+	width: 100%;
+	z-index: 200;
+}
+
+	.featprop-main{
+		background: #fff;
+		position: relative;
+		z-index: 200;
+		display: block;
+		max-width: 700px;
+		padding: 15px;
+		box-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+	}
+
+	.featprop-item-photo{
+		height: 390px;
+		display: block;
+	}
+
+	.featprop-holder{
+		position: relative;
+		display: block;
+		height: 100%;
+	}
+
+	.slick-arrow-holder {
+	   	position: absolute;
+    	left: 0;
+    	bottom: -55px;
+	}
+
+	.bldginfo-arrows.slick-arrow-holder{
+		bottom: 0;
+	}
+
+	.slick-arrow-holder .fp-arrows {
+	    display: inline-block !important;
+	    vertical-align: middle;
+	    width: 40px;
+	    height: 40px;
+	    font-size: 0;
+	}
+
+	 .slick-arrow-holder i {
+	    color: #7b5f25;
+	    text-align: center;
+	    line-height: 40px;
+	    font-size: 20px;
+	    display: block;
+	    cursor: pointer;
+	}
+
+	.slick-arrow-holder .slick-prev i{
+		background: #ff6d00;
+    	color: #fff;
+	}
+
+	.slick-arrow-holder .slick-next i{
+		background: #fff;
+    	color: #ff6d00;
+	}
+
+	/*Arrows*/
+	.arrows {
+		width: 60px;
+		height: 72px;
+		margin-left: -30px;
+		bottom: 20px;
+	}
+
+	.arrows path {
+		stroke: #ffffff;
+		fill: transparent;
+		stroke-width: 1px;	
+		animation: arrow 2s infinite;
+		-webkit-animation: arrow 2s infinite; 
+	}
+
+	@keyframes arrow {
+		0% {opacity:0}
+		40% {opacity:1}
+		80% {opacity:0}
+		100% {opacity:0}
+	}
+
+	@-webkit-keyframes arrow {
+		0% {opacity:0}
+		40% {opacity:1}
+		80% {opacity:0}
+		100% {opacity:0}
+	}
+
+	.arrows path.a1 {
+		animation-delay:-1s;
+		-webkit-animation-delay:-1s; 
+	}
+
+	.arrows path.a2 {
+		animation-delay:-0.5s;
+		-webkit-animation-delay:-0.5s;
+	}
+
+	.arrows path.a3 {	
+		animation-delay:0s;
+		-webkit-animation-delay:0s;
+	}
+
+	.arrow-holder {
+		width: 60px;
+	    height: 72px;
+	    position: absolute;
+	    bottom: 20px;
+	    right: 0;
+	    z-index: 300;
+	    cursor: pointer;
+	}
+
+	/*Contact Information*/
+	.contact-label {
+	    color: #fff;
+	    font-size: 35px;
+	    text-transform: uppercase;
+	    text-align: right;
+	    text-shadow: 1px 1px 1px #000;
+	    line-height: 1.5;
+	    position: relative;
+	    margin-top: 189px;
+	    padding-right: 100px;
+	}
+
+/*About*/
+.about-wrap {
+    padding: 90px 0;
+    background: #fff;
+}
+
+	.about-label {
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-size: 18px;
+	}
+
+	.about-label span {
+	    display: block;
+	    font-size: 27px;
+	    margin-bottom: 30px;
+	    letter-spacing: 4px;
+	    color: #ff6d00;
+	    font-weight: 700;
+	}
+
+	.about-content {
+	    text-align: center;
+    	font-size: 14px;
+    	line-height: 1.7;
+	}
+
+	.about-content ul {
+	    margin: 40px auto 0;
+	    color: #ff6d00;
+	    max-width: 600px;
+	    width: 100%;
+	}
+
+	.about-content ul li{
+		padding: 7px 0;
+		border-bottom: 1px solid #ccc;
+	}
+
+
+/*Blog*/
+.bldginfo-wrap{
+	padding: 100px 0px;
+	background: url(images/architect.jpg) fixed no-repeat center top/ cover;
+	position: relative;
+}
+
+	.bldginfo-wrap::before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 100%;
+	    background: rgba(0, 0, 0, 0.1);
+	    z-index: 100;
+	}
+
+	.bldginfo-container{
+		position: relative;
+		z-index: 200;
+	}
+
+	.bldginfo {
+	    background: #fff;
+	    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+	    margin: 85px 0;
+	}
+
+	.bldginfo-label {
+	    font-size: 20px;
+	    font-weight: 700;
+	    text-align: center;
+	    text-transform: uppercase;
+	    padding: 20px 0;
+	    color: #775d24;
+	    letter-spacing: 2px;
+	}
+
+	.bldginfo-main-details-holder {
+	    background: #fff;
+	    text-align: center;
+	    font-size: 15px;
+	}
+
+	.bmd-label {
+    	background: #e9a16c;
+	    color: #fff;
+	    padding: 10px 15px;
+	    text-transform: uppercase;
+	}
+
+	.bmd-value {
+	    padding: 5px 15px;
+    	border-bottom: 1px solid #e2e2e2;
+    	font-size: 13px;
+	}
+
+	.bldginfo-main-details-label {
+	    text-align: center;
+	    font-size: 25px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    margin-bottom: 20px;
+	    background: #ff6d00;
+	    padding: 10px 0;
+	}
+
+/*Property Facts*/
+.propertyfacts-wrap{
+	text-align: center;
+	padding: 90px 0;
+}
+
+	.propertyfacts-main-label {
+	    font-size: 27px;
+	    margin-bottom: 30px;
+	    letter-spacing: 4px;
+	    color: #ff6d00;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	}
+
+	.propertyfacts-main-label-2{
+		margin-top: 90px;
+	}
+
+	.propertyfacts-col {
+	    font-size: 14px;
+	    border-bottom: 1px solid #e06813;
+	    padding: 10px 0;
+	}
+
+	.propertyfacts-label {
+	    background: #ffb886;
+	    color: #000;
+	}
+
+/*Location*/
+.location-wrap {
+    font-size: 0;
+    padding: 15px;
+}
+
+	.location-iframe{
+		width: 100%;
+		height: 500px;
+		border: 0;
+	}
+
+/*Contact*/
+.contact-wrap{
+	position: relative;
+	background: url(images/contact.jpg) fixed no-repeat center left / cover;
+}
+
+	.contact-wrap::before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 100%;
+	    background: rgba(0, 0, 0, 0.3);
+	    z-index: 100;
+	}
+
+	/*Contact Form*/
+	.contact-form-main {
+	    background: rgba(255, 238, 199, 0.6);
+	    padding: 30px 15px;
+	    max-width: 360px;
+	    width: 100%;
+	    margin: 100px auto;
+	    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+	}
+
+	.contact-container{
+		position: relative;
+		z-index: 200;
+	}
+
+	.contact-form-label {
+	    text-align: center;
+	    font-size: 23px;
+	    font-weight: 700;
+	    color: #775d24;
+	    text-transform: uppercase;
+	    position: relative;
+	    padding-bottom: 20px;
+	    margin-bottom: 20px;
+	    line-height: 1.2;
+	}
+
+	.contact-form-label::before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	    width: 100px;
+	    height: 2px;
+	    background: #775d24;
+	}
+
+	.contact-form {
+	    max-width: 300px;
+	    width: 100%;
+	    margin: auto;
+	}
+
+	.contact-form input,
+	.contact-form textarea{
+		width: 100%;
+		height: 35px;
+		font-size: 12px;
+		border:  1px solid #775d24;
+		padding: 0 5px;
+		background: #fff8ea;
+		color: #775d24;
+	}
+
+	.contact-form textarea{
+		height: 100px;
+		line-height: 35px;
+		padding: 3px 5px;
+		resize: none;
+	}
+
+	.contact-form input[type="submit"] {
+	    font-size: 0px;
+	    background: transparent;
+	    height: 100%;
+	    border: 0;
+	    position: relative;
+	    z-index: 100;
+	    padding: 0;
+	}
+
+	.contact-form input::-webkit-input-placeholder,
+	.contact-form textarea::-webkit-input-placeholder { 
+	  color: #775d24;
+	  font-family: 'Helvetica', Arial, sans-serif;
+	}
+
+	.contact-form input::-moz-placeholder,
+	.contact-form textarea::-moz-placeholder {
+	  color: #775d24;
+	  font-family: 'Helvetica', Arial, sans-serif;
+	}
+
+	.contact-form input:-ms-input-placeholder,
+	.contact-form textarea:-ms-input-placeholder { 
+	  color: #775d24;
+	  font-family: 'Helvetica', Arial, sans-serif;
+	}
+
+	.contact-form input:-moz-placeholder,
+	.contact-form textarea:-moz-placeholder {
+	  color: #775d24;
+	  font-family: 'Helvetica', Arial, sans-serif;
+	}
+
+	.contact-form input[type="submit"]:focus{
+		color: #1b3765;
+		background: transparent;
+	}
+
+	.cf-field{
+		margin-bottom: 5px;
+	}
+
+	.cf-field.cf-submit {
+	    position: relative;
+	    width: 38px;
+	    height: 38px;
+	    display: block;
+	    margin-left: auto;
+	}
+
+	.cf-field.cf-submit i{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		color: #775d24;
+		font-size: 30px;
+		text-align: center;
+		line-height: 38px;
+	}
+
+		/*Focus*/
+		.contact-form input:focus,
+		.contact-form textarea:focus{
+			background: #fff;
+			color: #1b3765;
+		}
+
+		.contact-form input:focus::-webkit-input-placeholder,
+		.contact-form textarea:focus::-webkit-input-placeholder { 
+		  	background: #fff;
+			color: #1b3765;
+		}
+
+		.contact-form input:focus::-moz-placeholder,
+		.contact-form textarea:focus::-moz-placeholder { 
+		  	background: #fff;
+			color: #1b3765;
+		}
+
+		.contact-form input:focus::-ms-input-placeholder,
+		.contact-form textarea:focus::-ms-input-placeholder { 
+		  	background: #fff;
+			color: #1b3765;
+		}
+
+		.contact-form input:focus::-moz-placeholder,
+		.contact-form textarea:focus::-moz-placeholder { 
+		  	background: #fff;
+			color: #1b3765;
+		}
+
+	/*Agents*/
+	.agents-info{
+		margin-bottom: 30px;
+	}
+
+	.agents-pos{
+		margin-bottom: 10px;
+	}
+
+	.agents-pos, 
+	.agents-email {
+	    font-size: 13px;
+	    color: #fff;
+	}
+
+	.agents-phones a,
+	.agents-email a {
+	    display: inline-block;
+	    color: #fff;
+	    font-size: 12px;
+	}
+
+	.contact-info-wrap {
+	    padding-top: 100px;
+	}
+
+	.agents-name {
+	    font-size: 20px;
+	    font-weight: 600;
+	    text-transform: uppercase;
+	    color: #f3c051;
+	    letter-spacing: 1px;
+	    text-shadow: 1px 1px 1px #000;
+	}
+
+	.contact-main-label {
+	    font-size: 30px;
+	    margin-bottom: 55px;
+	    border-bottom: 1px solid #ccc6b0;
+	    padding-bottom: 5px;
+	    color: #fff;
+	    text-shadow: 1px 1px 1px #000;
+	}
+		
+/****************************************
+MEDIA QUERIES
+****************************************/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.header-wrap{
+		position: relative;
+		text-align: center;
+	}
+
+	.header-right-logo{
+		margin: 0px auto 10px;
+	}
+
+	.banner-photo{
+		position: relative;
+		background: url(images/agreement.jpg) scroll no-repeat center bottom / cover;
+	}
+
+	.featprop-wrap{
+		bottom: 0;
+		position: relative;
+	}
+
+	.featprop-main{
+		margin: 50px auto 0;
+	}
+
+	.contact-label {
+	    margin-top: 150px;
+	    margin-bottom: 30px;
+	    text-align: center;
+	    padding-right: 0;
+	    padding-bottom: 100px;
+	}
+
+	.contact-wrap{
+		text-align: center;
+		background: url(images/contact.jpg) scroll no-repeat center left / cover;
+	}
+
+	.slick-arrow-holder{
+		right: 0;
+		text-align: center;
+	}
+
+	.bldginfo-arrows.slick-arrow-holder {
+	    bottom: -55px;
+	}
+
+	.arrow-holder{
+		left: 0;
+		margin: auto;
+	}
+
+	.arrows{
+		margin-left: 0;
+	}
+
+	.bldginfo-wrap {
+	    background: url(images/architect.jpg) scroll no-repeat center top/ cover;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+
+}
+
+@media only screen and (max-width : 576px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
