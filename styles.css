@@ -830,6 +830,12 @@ body{
 	    text-shadow: 1px 1px 1px #000;
 	}
 
+		/*Hover*/
+		.agents-phones a:hover,
+		.agents-email a:hover  {
+		    color: #f3c050;
+		}
+
 /*Footer*/
 .footer-wrap {
     text-align: center;
@@ -902,6 +908,16 @@ body{
 	    overflow-y: auto;
 	    text-align: justify;
 	}
+
+		/*Hover*/
+		.footer-wrap a:hover {
+		    color: #ffe94e;
+		}
+
+		.fc-smi a:hover {
+		    color: #1b3865;
+		    background: #ffe94e;
+		}
 
 /****************************************
 MEDIA QUERIES
