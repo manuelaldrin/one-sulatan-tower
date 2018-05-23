@@ -786,6 +786,12 @@ body{
 			color: #1b3765;
 		}
 
+		.contact-form iframe{
+			overflow: hidden;
+			height: 500px;
+			width: 320px;
+		}
+
 	/*Agents*/
 	.agents-info{
 		margin-bottom: 30px;
@@ -797,7 +803,7 @@ body{
 
 	.agents-pos, 
 	.agents-email {
-	    font-size: 13px;
+	    font-size: 15px;
 	    color: #fff;
 	}
 
@@ -805,7 +811,7 @@ body{
 	.agents-email a {
 	    display: inline-block;
 	    color: #fff;
-	    font-size: 12px;
+	    font-size: 14px;
 	}
 
 	.contact-info-wrap {
@@ -866,11 +872,11 @@ body{
 
 	}
 
-	.fc-field a{
+	.fc-field a,
+	.fc-field.fc-address{
 		color: #fff;
-		font-size: 12px;
+		font-size: 14px;
 	}
-
 
 	.fc-smi{
 		margin: 20px 0;
@@ -891,7 +897,7 @@ body{
 
 	.footer-credits{
 		margin: 50px 0 0px;
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.footer-credits p{

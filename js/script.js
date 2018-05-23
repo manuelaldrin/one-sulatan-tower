@@ -105,6 +105,8 @@
 	});
 
 	$(window).load(function () { 
+
+		$('.contact-form').load('http://kmcmaggroup.com/arthaland-century-pacific-tower/ .agent-contact-form');
 		
 	});
 
